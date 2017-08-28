@@ -33,11 +33,7 @@ var userName = process.argv[3];
 var params = {
 	screen_name: userName,
 	count: 20 // See below for reason why this is added
-};
-
-client.get('statuses/user_timeline', params, function(error, tweets, response) {
-	if (!error) {    
-    // count 	Parameters (found on https://dev.twitter.com/rest/reference/get/search/tweets)
+	// count 	Parameters (found on https://dev.twitter.com/rest/reference/get/search/tweets)
     // Name		Required	Description						Default Value		Example
     // Count 	optional 	The number of tweets to 							100
     //						return per page, up to a 
@@ -45,13 +41,18 @@ client.get('statuses/user_timeline', params, function(error, tweets, response) {
     // 						15. This was formerly the 
     //						“rpp” parameter in the old 
     //						Search API.
+};
+
+client.get('statuses/user_timeline', params, function(error, tweets, response) {
+	if (!error) {    
+    
   }
   for (i = 0; i < tweets.length; i++) {
                 var number = i + 1;
                 console.log(' ');
                 console.log('*===========================================* ');
-                console.log('Created on: ' + tweets[i].created_at);
-                console.log([i + 1] + '. ' + tweets[i].text);                
+                console.log('* Created on: ' + tweets[i].created_at);    
+                console.log('* ' + [i + 1] + '. ' + tweets[i].text);                
                 console.log('*===========================================* ');
                 console.log(' ');
     }
