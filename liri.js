@@ -19,6 +19,7 @@ switch (action) {
     case 'movie-this': movieThis(value); break;
     case 'do-what-it-says': doWhatItSays(); break;
 }
+
 // This starts code for functions of the app
 
 function myTweets() {
@@ -75,10 +76,10 @@ function spotifyAPI(value) {
  		var songInfo = data.tracks.items[0];
  		var infoResults = 
  		console.log("*===========================================*");
- 		console.log(songInfo.artists[0].name);
- 		console.log(songInfo.name);
- 		console.log(songInfo.album.name);
- 		console.log(songInfo.preview_url);
+ 		console.log("* " + songInfo.artists[0].name);
+ 		console.log("* " + songInfo.name);
+ 		console.log("* " + songInfo.album.name);
+ 		console.log("* " + songInfo.preview_url);
  		console.log("*===========================================*");
 
  	infoResults; //call this variable to display search answers
@@ -125,14 +126,14 @@ function movieThis(value) {
   			// Parse the body of the site and recover just the imdbRating    	  	
     	var infoResults = 
     	console.log("==================================================");
-    	console.log("Title of the movie: " + JSON.parse(body).Title);
-    	console.log("Year the movie came out: " + JSON.parse(body).Year);
-    	console.log("IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
-    	console.log("Rotten Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
-    	console.log("Country where the movie was produce: " + JSON.parse(body).Country);
-    	console.log("Language of the movie: " + JSON.parse(body).Language);
-    	console.log("Plot of the movie: " + JSON.parse(body).Plot);
-    	console.log("Actors in the movie: " + JSON.parse(body).Actors);
+    	console.log(" Title of the movie: " + JSON.parse(body).Title);
+    	console.log(" Year the movie came out: " + JSON.parse(body).Year);
+    	console.log(" IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
+    	console.log(" Rotten Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
+    	console.log(" Country where the movie was produce: " + JSON.parse(body).Country);
+    	console.log(" Language of the movie: " + JSON.parse(body).Language);
+    	console.log(" Plot of the movie: " + JSON.parse(body).Plot);
+    	console.log(" Actors in the movie: " + JSON.parse(body).Actors);
     	console.log("==================================================");
 
     infoResults; //call this variable to display search answers
