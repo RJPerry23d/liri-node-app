@@ -32,28 +32,37 @@ var client = new Twitter({
 var userName = process.argv[3];
 var params = {
 	screen_name: userName,
-	count: 1
+	count: 20 // See below for reason why this is added
 };
 
 client.get('statuses/user_timeline', params, function(error, tweets, response) {
-	if (!error) {
-    // // console.log(response.tweets[0].created_at);
-    // console.log(JSON.parse(response).tweets[0].created_at);
-    // console.log(JSON.stringify(response.tweets[0].created_at, null, 2));
-    var tweetList = 
-    console.log("*===========================================*");
-    console.log(tweets[0].created_at);
-    console.log(tweets[0].text);
-    console.log("*===========================================*");
-    debugger;
-    tweetList; //call this variable to display search answers
+	if (!error) {    
+    // count 	Parameters (found on https://dev.twitter.com/rest/reference/get/search/tweets)
+    // Name		Required	Description						Default Value		Example
+    // Count 	optional 	The number of tweets to 							100
+    //						return per page, up to a 
+    //						maximum of 100. Defaults to
+    // 						15. This was formerly the 
+    //						“rpp” parameter in the old 
+    //						Search API.
   }
+  for (i = 0; i < tweets.length; i++) {
+                var number = i + 1;
+                console.log(' ');
+                console.log('*===========================================* ');
+                console.log('Created on: ' + tweets[i].created_at);
+                console.log([i + 1] + '. ' + tweets[i].text);                
+                console.log('*===========================================* ');
+                console.log(' ');
+    }
 });
+
+
 }// end myTweets function
 
 var firstArgument = process.argv[2];
 var secondArgument = process.argv[3];
-var song = "The sign";
+var song = "The sign"; //default value for song in case no return of search
 var nodeArg = process.argv
 
 function spotifyAPI(value) {
@@ -142,7 +151,7 @@ function doWhatItSays() {
             var dataArr = data.split(',');
             console.log(data);
             console.log(dataArr[0]); 
-            
+
 
 
             if (dataArr[0] === 'spotify-this-song') {
