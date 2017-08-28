@@ -1,0 +1,35 @@
+{
+	"Title":"Boogie Nights",
+	"Year":"1997",
+	"Rated":"R",
+	"Released":"31 Oct 1997",
+	"Runtime":"155 min",
+	"Genre":"Drama",
+	"Director":"Paul Thomas Anderson",
+	"Writer":"Paul Thomas Anderson",
+	"Actors":"Luis Guzmán, Burt Reynolds, Julianne Moore, Rico Bueno",
+	"Plot":"The story of a young man's adventures in the Californian pornography industry of the late 1970s and early 1980s.",
+	"Language":"English",
+	"Country":"USA",
+	"Awards":"Nominated for 3 Oscars. Another 29 wins & 49 nominations.",
+	"Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjMzNzkwNjEyOF5BMl5BanBnXkFtZTgwOTY3Njc3NjE@._V1_SX300.jpg",
+	"Ratings":[
+	{
+			"Source":"Internet Movie Database",
+			"Value":"7.9/10"},
+	{
+			"Source":"Rotten Tomatoes",
+			"Value":"92%"},
+	{
+			"Source":"Metacritic",
+			"Value":"85/100"}],
+	"Metascore":"85",
+	"imdbRating":"7.9",
+	"imdbVotes":"200,455",
+	"imdbID":"tt0118749",
+	"Type":"movie",
+	"DVD":"07 Apr 1998",
+	"BoxOffice":"N/A",
+	"Production":"New Line Cinema",
+	"Website":"N/A",
+	"Response":"True"}
