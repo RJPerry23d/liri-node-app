@@ -143,7 +143,7 @@ function movieThis(value) {
 
 function doWhatItSays() {
 	//Here is where I have my function to call on random rquests
-	 fs.readFile('random.txt', 'utf8', function(err, data) {
+	 fs.readFile('random.txt', 'UTF-8', function(err, data) {
     	// console.log(data);
         if (err) {
             console.log(err);
