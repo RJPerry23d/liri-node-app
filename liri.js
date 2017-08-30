@@ -55,7 +55,8 @@ function myTweets() {
         }
         for (i = 0; i < tweets.length; i++) {
             var number = i + 1;
-            console.log('\n*===========================================*\n* Created on: ' + tweets[i].created_at + '\n* ' + [i + 1] + '. ' + tweets[i].text + '\n*===========================================*\n');
+            console.log('\n*===========================================*\n* Created on: ' + tweets[i].created_at +
+             '\n* ' + [i + 1] + '. ' + tweets[i].text + '\n*===========================================*\n');
         }
     });
 
@@ -77,7 +78,9 @@ function spotifyAPI(value) {
         } else {
             var songInfo = data.tracks.items[0];
             var infoResults =
-                console.log("*===========================================*\n " + songInfo.artists[0].name + '\n ' + songInfo.name + '\n ' + songInfo.album.name + '\n ' + songInfo.preview_url + "\n*===========================================*");
+                console.log("*===========================================*\n " + songInfo.artists[0].name +
+                 '\n ' + songInfo.name + '\n ' + songInfo.album.name + '\n ' + songInfo.preview_url +
+                  "\n*===========================================*");
             infoResults; //call this variable to display search answers
         }
     });
@@ -118,7 +121,8 @@ function movieThis(movie) {
         if (!error && response.statusCode === 200) {
             // Parse the body of the site and recover just the imdbRating           
             var infoResults =
-                console.log("*==================================================*\n* Title of the movie: " + JSON.parse(body).Title + "\n* Year the movie came out: " + JSON.parse(body).Year + "\n* IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
+                console.log("*==================================================*\n* Title of the movie: " + JSON.parse(body).Title +
+                 "\n* Year the movie came out: " + JSON.parse(body).Year + "\n* IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
             
             if (!JSON.parse(body).Ratings.Value) {
                 console.log("* No name available");
