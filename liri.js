@@ -119,17 +119,14 @@ function movieThis(movie) {
             // Parse the body of the site and recover just the imdbRating           
             var infoResults =
                 console.log("*==================================================*\n* Title of the movie: " + JSON.parse(body).Title + "\n* Year the movie came out: " + JSON.parse(body).Year + "\n* IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
-            // console.log(\n* Title of the movie: " + JSON.parse(body).Title);
-            // console.log("\n* Year the movie came out: " + JSON.parse(body).Year);
-            // console.log("\n* IMDB Rating of the movie: " + JSON.parse(body).imdbRating)
-
+            
             if (!JSON.parse(body).Ratings.Value) {
                 console.log("* No name available");
             } else {
                 console.log("* Rotten Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
             }
             console.log("* Country where the movie was produce: " + JSON.parse(body).Country + "\n* Language of the movie: " + JSON.parse(body).Language + "\n* Plot of the movie: " + JSON.parse(body).Plot + "\n* Actors in the movie: " + JSON.parse(body).Actors + "\n*==================================================*");
-            
+
             infoResults; //call this variable to display search answers
         }
     });
@@ -138,7 +135,7 @@ function movieThis(movie) {
 
 function doWhatItSays() {
     //Here is where I have my function to call on random rquests
-    fs.readFile('random.txt', 'UTF-8', function(err, data) {        
+    fs.readFile('random.txt', 'UTF-8', function(err, data) {
         if (err) {
             console.log(err);
         } else {
