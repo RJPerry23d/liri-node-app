@@ -55,12 +55,7 @@ function myTweets() {
         }
         for (i = 0; i < tweets.length; i++) {
             var number = i + 1;
-            console.log(' ');
-            console.log('*===========================================* ');
-            console.log('Created on: ' + tweets[i].created_at);
-            console.log([i + 1] + '. ' + tweets[i].text);
-            console.log('*===========================================* ');
-            console.log(' ');
+            console.log('\n*===========================================*\nCreated on: ' + tweets[i].created_at + '\n' + [i + 1] + '. ' + tweets[i].text + '\n*===========================================*\n');
         }
     });
 
@@ -82,13 +77,7 @@ function spotifyAPI(value) {
         } else {
             var songInfo = data.tracks.items[0];
             var infoResults =
-                console.log("*===========================================*");
-            console.log(songInfo.artists[0].name);
-            console.log(songInfo.name);
-            console.log(songInfo.album.name);
-            console.log(songInfo.preview_url);
-            console.log("*===========================================*");
-
+                console.log("*===========================================*\n " + songInfo.artists[0].name + '\n ' + songInfo.name + '\n ' + songInfo.album.name + '\n ' + songInfo.preview_url + "\n*===========================================*");
             infoResults; //call this variable to display search answers
         }
     });
@@ -110,8 +99,6 @@ function movieThis(movie) {
         console.log("No Movie");
         var nodeArgs = process.argv || movieName;
         for (var i = 3; i < nodeArgs.length; i++) {
-
-
             movieName = movieName + " " + nodeArgs[i];
         }
     } else {
@@ -131,22 +118,18 @@ function movieThis(movie) {
         if (!error && response.statusCode === 200) {
             // Parse the body of the site and recover just the imdbRating           
             var infoResults =
-                console.log("==================================================");
-            console.log("Title of the movie: " + JSON.parse(body).Title);
-            console.log("Year the movie came out: " + JSON.parse(body).Year);
-            console.log("IMDB Rating of the movie: " + JSON.parse(body).imdbRating)
+                console.log("*==================================================*\n* Title of the movie: " + JSON.parse(body).Title + "\n* Year the movie came out: " + JSON.parse(body).Year + "\n* IMDB Rating of the movie: " + JSON.parse(body).imdbRating);
+            // console.log(\n* Title of the movie: " + JSON.parse(body).Title);
+            // console.log("\n* Year the movie came out: " + JSON.parse(body).Year);
+            // console.log("\n* IMDB Rating of the movie: " + JSON.parse(body).imdbRating)
 
             if (!JSON.parse(body).Ratings.Value) {
-                console.log("No name available");
+                console.log("* No name available");
             } else {
-                console.log(" Rotten Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
+                console.log("* Rotten Tomatoes Rating of the movie: " + JSON.parse(body).Ratings[1].Value);
             }
-            console.log("Country where the movie was produce: " + JSON.parse(body).Country);
-            console.log("Language of the movie: " + JSON.parse(body).Language);
-            console.log("Plot of the movie: " + JSON.parse(body).Plot);
-            console.log("Actors in the movie: " + JSON.parse(body).Actors);
-            console.log("==================================================");
-
+            console.log("* Country where the movie was produce: " + JSON.parse(body).Country + "\n* Language of the movie: " + JSON.parse(body).Language + "\n* Plot of the movie: " + JSON.parse(body).Plot + "\n* Actors in the movie: " + JSON.parse(body).Actors + "\n*==================================================*");
+            
             infoResults; //call this variable to display search answers
         }
     });
