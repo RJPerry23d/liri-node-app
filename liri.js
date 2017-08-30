@@ -55,7 +55,7 @@ function myTweets() {
         }
         for (i = 0; i < tweets.length; i++) {
             var number = i + 1;
-            console.log('\n*===========================================*\nCreated on: ' + tweets[i].created_at + '\n' + [i + 1] + '. ' + tweets[i].text + '\n*===========================================*\n');
+            console.log('\n*===========================================*\n* Created on: ' + tweets[i].created_at + '\n* ' + [i + 1] + '. ' + tweets[i].text + '\n*===========================================*\n');
         }
     });
 
